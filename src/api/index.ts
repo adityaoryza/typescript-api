@@ -1,7 +1,10 @@
 import express from 'express';
+import { Request, Response } from 'express';
+// import moment from 'moment';
 
 import MessageResponse from '../interfaces/MessageResponse';
 import emojis from './emojis';
+import kurs from './kurs';
 import axios from 'axios'; // Import axios
 import cheerio from 'cheerio'; // Import cheerio
 import Data, { IData } from '../../models/data';
@@ -13,8 +16,6 @@ router.get<{}, MessageResponse>('/', (req, res) => {
     message: 'API - 👋🌎🌍🌏',
   });
 });
-
-// New route for '/api/indexing'
 
 router.get<{}, MessageResponse>('/indexing', async (req, res) => {
   try {
@@ -92,5 +93,6 @@ router.get<{}, MessageResponse>('/indexing', async (req, res) => {
 });
 
 router.use('/emojis', emojis);
+router.use('/kurs', kurs);
 
 export default router;
