@@ -10,5 +10,5 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": ["./api/*.js", "./*.js", "src/**/*.ts", "test/**/*.ts"]
+  "include": ["./api/*.ts", "./*.ts", "src/**/*.ts", "test/**/*.ts"]
 }
