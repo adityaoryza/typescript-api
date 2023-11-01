@@ -36,7 +36,7 @@ router.delete<{ date: string }, { message?: string; error?: string }>(
       console.error('Error deleting records:', error);
       res.status(500).json({ error: 'Failed to delete records' });
     }
-  }
+  },
 );
 
 // New route for retrieving data within a date range
@@ -181,5 +181,5 @@ router.put('/', async (req, res) => {
     res.status(500).json({ error: 'Failed to update data' });
   }
 });
-
+// update
 export default router;
